@@ -242,17 +242,7 @@ export const TapSection = ({ user, onTap, onOpenRank }: TapSectionProps) => {
           ))}
         </div>
 
-        {/* Enhanced Tap Instruction */}
-        <div className="text-center mt-1 sm:mt-2">
-          <div className="bg-gradient-to-r from-black/30 to-gray-800/30 backdrop-blur-md border border-teal-400/40 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 inline-block shadow-md shadow-teal-400/15">
-            <p className="text-teal-300 font-bold text-xs flex items-center gap-1 sm:gap-1.5">
-              <span className="animate-bounce-slow">👆</span>
-              <span>Tap to Mine UC!</span>
-              <span className="animate-pulse-slow">💎</span>
-            </p>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Enhanced Energy System */}
       <div className="bg-gradient-to-r from-black/30 to-gray-800/30 backdrop-blur-md border border-teal-400/30 rounded-xl p-2 sm:p-3 shadow-md shadow-teal-400/15 mb-16 sm:mb-20 md:mb-24">
@@ -292,6 +282,18 @@ export const TapSection = ({ user, onTap, onOpenRank }: TapSectionProps) => {
               <div className="absolute top-0.5 left-1/4 w-1 h-1 sm:w-1.5 sm:h-1.5 bg-yellow-300 rounded-full animate-ping-slow" />
             </>
           )}
+
+             {/* Enhanced Tap Instruction */}
+        <div className="text-center mt-1 sm:mt-2">
+          <div className="bg-gradient-to-r from-black/30 to-gray-800/30 backdrop-blur-md border border-teal-400/40 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 inline-block shadow-md shadow-teal-400/15">
+            <p className="text-teal-300 font-bold text-xs flex items-center gap-1 sm:gap-1.5">
+              <span className="animate-bounce-slow">👆</span>
+              <span>Tap to Mine UC!</span>
+              <span className="animate-pulse-slow">💎</span>
+            </p>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
