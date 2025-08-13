@@ -172,7 +172,7 @@ export const TapSection = ({ user, onTap, onOpenRank }: TapSectionProps) => {
                 alt="UC Coin"
                 width={200}
                 height={200}
-                className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain drop-shadow-xl"
+                className="w-70 h-70 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain drop-shadow-xl"
                 priority
                 quality={100}
                 style={{
