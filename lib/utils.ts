@@ -34,10 +34,11 @@ export const getUrlParameter = (name: string): string | null => {
 }
 
 export const clearUrlParameters = () => {
-  if (typeof window === "undefined") return
-  const url = new URL(window.location.href)
-  url.search = ""
-  window.history.replaceState({}, document.title, url.toString())
+  // URL parametrlarini tozalamaslik - foydalanuvchi so'rovi bo'yicha
+  // if (typeof window === "undefined") return
+  // const url = new URL(window.location.href)
+  // url.search = ""
+  // window.history.replaceState({}, document.title, url.toString())
 }
 
 export const parseReferralFromUrl = (): string | null => {

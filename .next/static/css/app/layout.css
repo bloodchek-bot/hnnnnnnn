@@ -723,8 +723,8 @@ video {
 .-right-12 {
   right: -3rem;
 }
-.-top-1 {
-  top: -0.25rem;
+.-top-1\.5 {
+  top: -0.375rem;
 }
 .-top-12 {
   top: -3rem;
@@ -980,9 +980,6 @@ video {
 .h-2\.5 {
   height: 0.625rem;
 }
-.h-24 {
-  height: 6rem;
-}
 .h-28 {
   height: 7rem;
 }
@@ -995,14 +992,17 @@ video {
 .h-4 {
   height: 1rem;
 }
-.h-40 {
-  height: 10rem;
+.h-48 {
+  height: 12rem;
 }
 .h-5 {
   height: 1.25rem;
 }
 .h-6 {
   height: 1.5rem;
+}
+.h-64 {
+  height: 16rem;
 }
 .h-7 {
   height: 1.75rem;
@@ -1088,9 +1088,6 @@ video {
 .w-2\.5 {
   width: 0.625rem;
 }
-.w-24 {
-  width: 6rem;
-}
 .w-28 {
   width: 7rem;
 }
@@ -1106,8 +1103,8 @@ video {
 .w-4 {
   width: 1rem;
 }
-.w-40 {
-  width: 10rem;
+.w-48 {
+  width: 12rem;
 }
 .w-5 {
   width: 1.25rem;
@@ -1187,11 +1184,11 @@ video {
 .max-w-\[--skeleton-width\] {
   max-width: var(--skeleton-width);
 }
-.max-w-\[70px\] {
-  max-width: 70px;
+.max-w-\[80px\] {
+  max-width: 80px;
 }
-.max-w-\[calc\(100vw-16px\)\] {
-  max-width: calc(100vw - 16px);
+.max-w-\[calc\(100vw-32px\)\] {
+  max-width: calc(100vw - 32px);
 }
 .max-w-lg {
   max-width: 32rem;
@@ -1716,8 +1713,8 @@ video {
 .bg-black\/80 {
   background-color: rgb(0 0 0 / 0.8);
 }
-.bg-black\/90 {
-  background-color: rgb(0 0 0 / 0.9);
+.bg-black\/95 {
+  background-color: rgb(0 0 0 / 0.95);
 }
 .bg-blue-300 {
   --tw-bg-opacity: 1;
@@ -2212,8 +2209,8 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-16 {
-  padding-bottom: 4rem;
+.pb-20 {
+  padding-bottom: 5rem;
 }
 .pb-3 {
   padding-bottom: 0.75rem;
@@ -2876,68 +2873,102 @@ body::before {
 /* Mobile-first responsive improvements */
 @media (max-width: 390px) {
   body {
-    font-size: 11px;
+    font-size: 12px;
     padding-bottom: 75px;
   }
   
   .main-container {
-    padding: 0 4px;
+    padding: 0 8px;
   }
   
   /* Smaller text and spacing for very small screens */
-  .text-base { font-size: 0.875rem; }
-  .text-lg { font-size: 1rem; }
-  .text-xl { font-size: 1.125rem; }
-  .text-2xl { font-size: 1.25rem; }
+  .text-base { font-size: 1rem; }
+  .text-lg { font-size: 1.125rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-2xl { font-size: 1.5rem; }
   
   /* Reduce padding and margins */
-  .p-3 { padding: 0.5rem; }
-  .p-4 { padding: 0.75rem; }
-  .p-6 { padding: 1rem; }
-  .gap-3 { gap: 0.5rem; }
-  .gap-4 { gap: 0.75rem; }
-  .mb-4 { margin-bottom: 0.75rem; }
-  .mb-6 { margin-bottom: 1rem; }
+  .p-3 { padding: 0.75rem; }
+  .p-4 { padding: 1rem; }
+  .p-6 { padding: 1.5rem; }
+  .gap-3 { gap: 0.75rem; }
+  .gap-4 { gap: 1rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .mb-6 { margin-bottom: 1.5rem; }
 }
 
 /* Optimize for iPhone SE and similar small screens */
 @media (max-width: 375px) and (max-height: 667px) {
   .main-container {
-    padding: 0 3px;
+    padding: 0 6px;
   }
   
   /* Further reduce spacing */
-  .space-y-3 > * + * { margin-top: 0.5rem; }
-  .space-y-4 > * + * { margin-top: 0.75rem; }
+  .space-y-3 > * + * { margin-top: 0.75rem; }
+  .space-y-4 > * + * { margin-top: 1rem; }
   
   body {
-    padding-bottom: 80px;
+    padding-bottom: 85px;
   }
 }
 
 /* Enhanced responsive design for larger screens */
 @media (min-width: 768px) {
   body {
-    padding-bottom: 90px;
+    padding-bottom: 100px;
   }
 }
 
 @media (min-width: 1024px) {
   body {
-    padding-bottom: 100px;
+    padding-bottom: 110px;
   }
 }
 
 @media (min-width: 1280px) {
   body {
-    padding-bottom: 110px;
+    padding-bottom: 120px;
+  }
+}
+
+/* Enhanced main container responsive design */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Responsive tap area sizing */
+.tap-area-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 40vh;
+  padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  .tap-area-container {
+    min-height: 35vh;
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tap-area-container {
+    min-height: 45vh;
+    padding: 2rem;
   }
 }
 /* Improved touch targets for mobile */
 @media (max-width: 768px) {
   button, .btn, [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 48px;
+    min-width: 48px;
   }
 }
 
@@ -4396,8 +4427,8 @@ button:focus-visible,
     inset: 1rem;
   }
 
-  .sm\:-top-1\.5 {
-    top: -0.375rem;
+  .sm\:-top-2 {
+    top: -0.5rem;
   }
 
   .sm\:bottom-0 {
@@ -4414,10 +4445,6 @@ button:focus-visible,
 
   .sm\:mb-1 {
     margin-bottom: 0.25rem;
-  }
-
-  .sm\:mb-2 {
-    margin-bottom: 0.5rem;
   }
 
   .sm\:mb-20 {
@@ -4444,6 +4471,10 @@ button:focus-visible,
     margin-top: 0.5rem;
   }
 
+  .sm\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .sm\:inline {
     display: inline;
   }
@@ -4460,12 +4491,12 @@ button:focus-visible,
     height: 2.5rem;
   }
 
-  .sm\:h-2 {
-    height: 0.5rem;
+  .sm\:h-12 {
+    height: 3rem;
   }
 
-  .sm\:h-28 {
-    height: 7rem;
+  .sm\:h-2 {
+    height: 0.5rem;
   }
 
   .sm\:h-3 {
@@ -4476,8 +4507,8 @@ button:focus-visible,
     height: 1rem;
   }
 
-  .sm\:h-48 {
-    height: 12rem;
+  .sm\:h-56 {
+    height: 14rem;
   }
 
   .sm\:h-6 {
@@ -4488,8 +4519,12 @@ button:focus-visible,
     height: 1.75rem;
   }
 
-  .sm\:h-8 {
-    height: 2rem;
+  .sm\:h-72 {
+    height: 18rem;
+  }
+
+  .sm\:min-h-\[90px\] {
+    min-height: 90px;
   }
 
   .sm\:w-1\.5 {
@@ -4500,12 +4535,12 @@ button:focus-visible,
     width: 2.5rem;
   }
 
-  .sm\:w-2 {
-    width: 0.5rem;
+  .sm\:w-12 {
+    width: 3rem;
   }
 
-  .sm\:w-28 {
-    width: 7rem;
+  .sm\:w-2 {
+    width: 0.5rem;
   }
 
   .sm\:w-3 {
@@ -4516,12 +4551,8 @@ button:focus-visible,
     width: 1rem;
   }
 
-  .sm\:w-48 {
-    width: 12rem;
-  }
-
-  .sm\:w-5 {
-    width: 1.25rem;
+  .sm\:w-56 {
+    width: 14rem;
   }
 
   .sm\:w-6 {
@@ -4532,16 +4563,16 @@ button:focus-visible,
     width: 1.75rem;
   }
 
-  .sm\:w-8 {
-    width: 2rem;
+  .sm\:w-72 {
+    width: 18rem;
   }
 
   .sm\:min-w-\[50px\] {
     min-width: 50px;
   }
 
-  .sm\:max-w-\[80px\] {
-    max-width: 80px;
+  .sm\:max-w-\[90px\] {
+    max-width: 90px;
   }
 
   .sm\:max-w-sm {
@@ -4612,12 +4643,16 @@ button:focus-visible,
     padding: 0.5rem;
   }
 
-  .sm\:p-2\.5 {
-    padding: 0.625rem;
-  }
-
   .sm\:p-3 {
     padding: 0.75rem;
+  }
+
+  .sm\:p-3\.5 {
+    padding: 0.875rem;
+  }
+
+  .sm\:p-4 {
+    padding: 1rem;
   }
 
   .sm\:px-1\.5 {
@@ -4635,6 +4670,11 @@ button:focus-visible,
     padding-right: 0.75rem;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -4650,8 +4690,8 @@ button:focus-visible,
     padding-bottom: 0.5rem;
   }
 
-  .sm\:pb-20 {
-    padding-bottom: 5rem;
+  .sm\:pb-24 {
+    padding-bottom: 6rem;
   }
 
   .sm\:text-left {
@@ -4701,52 +4741,48 @@ button:focus-visible,
     display: flex;
   }
 
-  .md\:h-10 {
-    height: 2.5rem;
+  .md\:h-14 {
+    height: 3.5rem;
   }
 
-  .md\:h-12 {
-    height: 3rem;
-  }
-
-  .md\:h-32 {
-    height: 8rem;
-  }
-
-  .md\:h-5 {
-    height: 1.25rem;
-  }
-
-  .md\:h-56 {
-    height: 14rem;
+  .md\:h-64 {
+    height: 16rem;
   }
 
   .md\:h-7 {
     height: 1.75rem;
   }
 
-  .md\:w-10 {
-    width: 2.5rem;
+  .md\:h-8 {
+    height: 2rem;
   }
 
-  .md\:w-12 {
-    width: 3rem;
+  .md\:h-80 {
+    height: 20rem;
   }
 
-  .md\:w-32 {
-    width: 8rem;
+  .md\:min-h-\[100px\] {
+    min-height: 100px;
   }
 
-  .md\:w-5 {
-    width: 1.25rem;
+  .md\:w-14 {
+    width: 3.5rem;
   }
 
-  .md\:w-56 {
-    width: 14rem;
+  .md\:w-64 {
+    width: 16rem;
   }
 
   .md\:w-7 {
     width: 1.75rem;
+  }
+
+  .md\:w-8 {
+    width: 2rem;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
   }
 
   .md\:w-\[var\(--radix-navigation-menu-viewport-width\)\] {
@@ -4757,39 +4793,48 @@ button:focus-visible,
     width: auto;
   }
 
-  .md\:max-w-\[420px\] {
-    max-width: 420px;
+  .md\:max-w-\[100px\] {
+    max-width: 100px;
   }
 
-  .md\:max-w-\[90px\] {
-    max-width: 90px;
+  .md\:max-w-\[420px\] {
+    max-width: 420px;
   }
 
   .md\:gap-3 {
     gap: 0.75rem;
   }
 
-  .md\:p-3 {
-    padding: 0.75rem;
-  }
-
   .md\:p-4 {
     padding: 1rem;
   }
 
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .md\:p-5 {
+    padding: 1.25rem;
   }
 
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:pb-28 {
+    padding-bottom: 7rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:opacity-0 {
@@ -4826,39 +4871,39 @@ button:focus-visible,
 
 @media (min-width: 1024px) {
 
-  .lg\:h-36 {
-    height: 9rem;
+  .lg\:h-72 {
+    height: 18rem;
   }
 
-  .lg\:h-64 {
-    height: 16rem;
+  .lg\:h-96 {
+    height: 24rem;
   }
 
-  .lg\:w-36 {
-    width: 9rem;
+  .lg\:w-72 {
+    width: 18rem;
   }
 
-  .lg\:w-64 {
-    width: 16rem;
+  .lg\:w-96 {
+    width: 24rem;
   }
 }
 
 @media (min-width: 1280px) {
 
-  .xl\:h-40 {
-    height: 10rem;
+  .xl\:h-80 {
+    height: 20rem;
   }
 
-  .xl\:h-72 {
-    height: 18rem;
+  .xl\:h-\[28rem\] {
+    height: 28rem;
   }
 
-  .xl\:w-40 {
-    width: 10rem;
+  .xl\:w-80 {
+    width: 20rem;
   }
 
-  .xl\:w-72 {
-    width: 18rem;
+  .xl\:w-\[28rem\] {
+    width: 28rem;
   }
 }
 

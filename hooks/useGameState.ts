@@ -135,7 +135,7 @@ export const useGameState = () => {
       }
       
       // Clear URL parameters for security
-      clearUrlParameters()
+      // clearUrlParameters() // URL parametrlarini tozalamaslik
 
       setGameState((prev) => ({ ...prev, dataLoaded: true }))
       setLoading(false)

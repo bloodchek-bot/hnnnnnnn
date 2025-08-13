@@ -140,11 +140,11 @@ export const TapSection = ({ user, onTap, onOpenRank }: TapSectionProps) => {
       </div>
 
       {/* Enhanced Main Tap Area with Optimized Coin */}
-      <div className="relative mb-4 sm:mb-6" ref={containerRef}>
+      <div className="relative mb-4 sm:mb-6 tap-area-container" ref={containerRef}>
         <div
-          className={`relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 mx-auto cursor-pointer transition-all duration-300 group ${
+          className={`relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] mx-auto cursor-pointer transition-all duration-300 group ${
             isPressed ? "scale-95 animate-coin-press-slow" : "hover:scale-105"
-          } max-w-[calc(100vw-16px)]`}
+          } max-w-[calc(100vw-32px)]`}
           onClick={handleTap}
           onTouchStart={(e) => {
             handleTapStart()
@@ -170,9 +170,9 @@ export const TapSection = ({ user, onTap, onOpenRank }: TapSectionProps) => {
               <Image
                 src="/images/uc-coin.png"
                 alt="UC Coin"
-                width={120}
-                height={120}
-                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 object-contain drop-shadow-xl"
+                width={200}
+                height={200}
+                className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain drop-shadow-xl"
                 priority
                 quality={100}
                 style={{

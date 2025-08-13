@@ -269,12 +269,12 @@ Join now: ${referralLink}`
       <div className="absolute inset-0 bg-black/40" />
 
       {/* App Container */}
-      <div className="relative z-10 main-container min-h-screen bg-transparent px-1 sm:px-2 md:px-4">
+      <div className="relative z-10 main-container min-h-screen bg-transparent px-2 sm:px-4 md:px-6">
         {/* Header */}
         <Header user={user} onOpenSettings={() => setShowSettingsModal(true)} />
 
         {/* Main Content */}
-        <main className="pb-16 sm:pb-20">
+        <main className="flex-1 pb-20 sm:pb-24 md:pb-28 flex flex-col">
           {activeSection === "tap" && (
             <TapSection user={user} onTap={handleTap} onOpenRank={() => setShowRankModal(true)} />
           )}
